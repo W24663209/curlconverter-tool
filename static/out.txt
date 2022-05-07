@@ -1,0 +1,29 @@
+import requests
+
+cookies = {
+    'username': 'admin',
+    'rememberMe': 'true',
+    'password': 'hmjW6srxgQfJ7hdzBDow6Jzx3PwzWSjcmHx7dVdC6hF021bXgd2KPNjuHGUtLg45foCqeGocgqcQz33dJg+xZA==',
+    'Admin-Token': 'eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6IjIwOTgxYTZhLTdmN2EtNDU3Ni1hMzAzLWU2NzBhNzc2MTU5MSJ9.Y9v2oRgW_5qTA77rzvNUneD-69MeRYpUmvStCo6t7nMy7_JhhuxT0pr6QZ8Krspw_n8Tk1hB4ZpLiRl-RKtzQQ',
+}
+
+headers = {
+    'Accept': 'application/json, text/plain, */*',
+    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+    'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6IjIwOTgxYTZhLTdmN2EtNDU3Ni1hMzAzLWU2NzBhNzc2MTU5MSJ9.Y9v2oRgW_5qTA77rzvNUneD-69MeRYpUmvStCo6t7nMy7_JhhuxT0pr6QZ8Krspw_n8Tk1hB4ZpLiRl-RKtzQQ',
+    'Connection': 'keep-alive',
+    'Referer': 'http://parking.weirui0755.com/system/user',
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+}
+
+params = (
+    ('pageNum', '1'),
+    ('pageSize', '20'),
+)
+
+response = requests.get('http://parking.weirui0755.com/prod-api/system/user/list', headers=headers, params=params, cookies=cookies, verify=False)
+
+#NB. Original query string below. It seems impossible to parse and
+#reproduce query strings 100% accurately so the one below is given
+#in case the reproduced version is not "correct".
+# response = requests.get('http://parking.weirui0755.com/prod-api/system/user/list?pageNum=1&pageSize=20', headers=headers, cookies=cookies, verify=False)

@@ -1,0 +1,8 @@
+{
+  "name": "curlconverter-tool",
+  "version": "1.0.0",
+  "dependencies": {
+    "curlconverter": "^3.21.0",
+    "request": "^2.88.2"
+  }
+}
